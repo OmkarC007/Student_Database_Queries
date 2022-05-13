@@ -1,0 +1,31 @@
+---------------student databse queries--------------------
+
+create database STUDENT;
+show databases;
+use STUDENT;
+CREATE TABLE student_table(  
+    Roll_No int NOT NULL AUTO_INCREMENT,  
+    name varchar(45) NOT NULL,  
+    Class varchar(35) NOT NULL,  
+    age int NOT NULL,  
+    PRIMARY KEY (Roll_No)  
+); 
+show tables;
+desc student_table;
+ALTER TABLE student_table
+ADD division varchar(20); 
+desc student_table;
+ALTER TABLE student_table  
+DROP COLUMN division; 
+desc student_table;
+insert into student_table values (1, "Omkar", "12th", 18);
+select * from student_table;
+insert into student_table(name,class,age) values( "Divya", "11th", 17);
+select * from student_table;
+insert into student_table(name,class,age) values( "Aj", "10th", 16);
+select * from student_table;
+ALTER TABLE student_table  
+RENAME COLUMN age to ages;
+desc student_table;
+select * from student_table;
+select Roll_No, name from student_table;
